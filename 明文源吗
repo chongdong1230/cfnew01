@@ -451,11 +451,11 @@ export default {
 				ev = true;
 			}
 
-		piu = getConfigValue('yxURL', env.yxURL || env.YXURL) || 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+		piu = getConfigValue('yxURL', env.yxURL || env.YXURL) || 'https://raw.githubusercontent.com/chongdong1230/yuip/refs/heads/main/yxip.txt';
 		
 		cp = getConfigValue('d', env.d || env.D) || '';
 		
-			const defaultURL = 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+			const defaultURL = 'https://raw.githubusercontent.com/chongdong1230/yuip/refs/heads/main/yxip.txt';
 		if (piu !== defaultURL) {
 				directDomains.length = 0;
 				customPreferredIPs = [];
@@ -1045,7 +1045,7 @@ async function handleSubscriptionRequest(request, user, url = null) {
         }
 
         if (epi) {
-        const defaultURL = 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+        const defaultURL = 'https://raw.githubusercontent.com/chongdong1230/yuip/refs/heads/main/yxip.txt';
             if (piu === defaultURL) {
             try {
                 const dynamicIPList = await fetchDynamicIPs();
@@ -3189,7 +3189,7 @@ function formatIdentifier(arr, offset = 0) {
 
 async function fetchAndParseNewIPs() {
     
-    const url = piu || "https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt";
+    const url = piu || "https://raw.githubusercontent.com/chongdong1230/yuip/refs/heads/main/yxip.txt";
     try {
         const response = await fetch(url);
         if (!response.ok) return [];
@@ -3365,8 +3365,8 @@ async function handleConfigAPI(request) {
                 updateCustomPreferredFromYx();
             }
             
-            const newPreferredIPsURL = getConfigValue('yxURL', '') || 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
-            const defaultURL = 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+            const newPreferredIPsURL = getConfigValue('yxURL', '') || 'https://raw.githubusercontent.com/chongdong1230/yuip/refs/heads/main/yxip.txt';
+            const defaultURL = 'https://raw.githubusercontent.com/chongdong1230/yuip/refs/heads/main/yxip.txt';
             if (newPreferredIPsURL !== defaultURL) {
                 directDomains.length = 0;
                 customPreferredIPs = [];
@@ -3707,7 +3707,7 @@ function updateConfigVariables() {
     
     cp = getConfigValue('d', '') || '';
     
-    piu = getConfigValue('yxURL', '') || 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+    piu = getConfigValue('yxURL', '') || 'https://raw.githubusercontent.com/chongdong1230/yuip/refs/heads/main/yxip.txt';
     
     const envFallback = getConfigValue('p', '');
     if (envFallback) {
@@ -3746,7 +3746,7 @@ function updateConfigVariables() {
         disablePreferred = false;
     }
     
-    const defaultURL = 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+    const defaultURL = 'https://raw.githubusercontent.com/chongdong1230/yuip/refs/heads/main/yxip.txt;
     if (piu !== defaultURL) {
         directDomains.length = 0;
         customPreferredIPs = [];
