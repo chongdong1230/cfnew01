@@ -3746,7 +3746,7 @@ function updateConfigVariables() {
         disablePreferred = false;
     }
     
-    const defaultURL = 'https://raw.githubusercontent.com/chongdong1230/yuip/refs/heads/main/yxip.txt;
+    const defaultURL = 'https://raw.githubusercontent.com/chongdong1230/yuip/refs/heads/main/yxip.txt';
     if (piu !== defaultURL) {
         directDomains.length = 0;
         customPreferredIPs = [];
